@@ -3,7 +3,6 @@ name: Practice Ci
 on:
     push:
         branches: [main]
-    workflow_dispatch: 
 
 jobs:
     run-code:
