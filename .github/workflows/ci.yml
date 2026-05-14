@@ -43,8 +43,8 @@ jobs:
             - name: run code
               run: npm start
               env:
-                NODE_ENV: prod
-                APP_NAME: JOY
+                NODE_ENV: ${{secrets.APP_NAME}}
+                APP_NAME: ${{secrets.NODE_ENV}}
     
     deploy-code:
       runs-on: ubuntu-latest
