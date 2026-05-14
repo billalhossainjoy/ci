@@ -42,6 +42,9 @@ jobs:
 
             - name: run code
               run: npm start
+              env:
+                NODE_ENV: prod
+                APP_NAME: JOY
     
     deploy-code:
       runs-on: ubuntu-latest
