@@ -56,10 +56,11 @@ jobs:
 
         - name: successfully 
           run: | 
-            if[ "$NODE_ENV" = "git-prod" ]; then
-              echo "deploy successfully"
+            if [ "$NODE_ENV" = "git-prod" ]; then
+              echo "NODE_ENV matched"
             else
-              echo "deploy failed"
+              echo "NODE_ENV did not match"
+              exit 1
             fi
           env:
             NODE_ENV: ${{secrets.APP_NAME}}
