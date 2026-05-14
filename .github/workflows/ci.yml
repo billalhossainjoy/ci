@@ -56,7 +56,7 @@ jobs:
 
         - name: successfully 
           run: | 
-            if["$NODE_ENV" = "git-prod"]; then
+            if[ "$NODE_ENV" = "git-prod" ]; then
               echo "deploy successfully"
             else
               echo "deploy failed"
