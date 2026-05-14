@@ -55,7 +55,15 @@ jobs:
           run: echo 'start to doploing'
 
         - name: successfully 
-          run: echo "successful"
+          run: | 
+            if["$NODE_ENV" = "git-prod"]; then
+              echo "deploy successfully"
+            else
+              echo "deploy failed"
+            fi
+          env:
+            NODE_ENV: ${{secrets.APP_NAME}}
+            APP_NAME: ${{secrets.NODE_ENV}}
       
 
 
